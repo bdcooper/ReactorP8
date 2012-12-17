@@ -4,7 +4,7 @@ function Start () {
 
 }
 
-var maxRotation = 0.00005;
+var maxRotation = 0.0001;
 var maxSpeed = 50;
 var steeringVector:Vector3;
 
