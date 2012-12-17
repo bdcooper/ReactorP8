@@ -1,7 +1,6 @@
-#pragma strict
-static var score : int;
-function OnTriggerEnter (hit : Collider){
 
+static var score : int = 0;
+function OnTriggerEnter (hit : Collider){
 if(hit.gameObject.tag == "Finish"){
    score ++;
    Destroy(gameObject);
@@ -9,8 +8,11 @@ if(hit.gameObject.tag == "Finish"){
 
    
 }
+
 }
 function OnGUI () {
      GUI.Label (Rect (250, 50, 100, 20), "Score: " + score.ToString()); }
-
-
+     function Update(){
+if (Input.GetKeyDown (KeyCode.Escape)){
+score = 0;}
+}

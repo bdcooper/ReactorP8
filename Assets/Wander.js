@@ -4,7 +4,7 @@ function Start () {
 
 }
 
-var maxRotation = 0.0001;
+var maxRotation = 0.00005;
 var maxSpeed = 50;
 var steeringVector:Vector3;
 
@@ -14,7 +14,7 @@ function Update () {
    
 	transform.Translate(steeringVector * Time.deltaTime);
 
-    transform.Rotate(0, randomBinomial() * maxRotation, 0);
+    transform.Rotate(0,randomBinomial() * maxRotation, 0);
 
 }
 
